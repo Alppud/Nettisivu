@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suuret kielimallit (tekoäly)</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-color: #4891ff;
+            --light-color: #f4f4f6;
+            --dark-color: #111;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            line-height: 1.5;
+            background: var(--light-color);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-title {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 50px 0;
+            font-size: 2.5rem; /* Increased font size for the title */
+        }
+
+        .navbar a {
+            flex: 1;
+            color: white;
+            text-align: center;
+            padding: 14px 0;
+            text-decoration: none;
+            border-right: 1px solid white;
+        }
+
+        .navbar a:first-child {
+            border-left: 1px solid white;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 4rem;
+        }
+
+        .info-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .text-xl {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+
+        .text-md {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .bg-primary {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .bg-light {
+            background: var(--light-color);
+            color: #333;
+        }
+
+        .bg-dark {
+            background: var(--dark-color);
+            color: #fff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 20px;
+            background: var(--light-color);
+            color: #333;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Added welcome text under the navbar */
+        .welcome-text {
+            text-align: center;
+            font-size: 2rem; /* Fairly big font size */
+            margin: 20px 0; /* Adjusted spacing */
+            color: var(--dark-color); /* Using predefined color for consistency */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="navbar-title">Suuret kielimallit(tekoäly)</h1>
+
+    <div class="navbar">
+        <a href="sisällöntuotto.html">Sisällöntuotto</a>
+        <a href="koodaaminen.html">Koodaaminen</a>
+        <a href="etiikka.html">Etiikka</a>
+    </div>
+
+    <!-- Welcome text added here -->
+    <div class="welcome-text">
+        Tervetuloa nettisivulleni, joka kertoo suurista kielimalleista
+    </div>
+    <div class="container">
+        <div class="info-container">
+            <h2 class="text-xl">Mitä suuret kielimallit ovat?</h2>
+            <p class="text-md">Suuret kielimallit ovat tekoälyjä, joita on koulutettu ymmärtämään ja luomaan sisältöä, kuten tekstiä tai kuvia. Ne kykenevät usein analysoimaan suuria määriä tietoa. Esimerkiksi openAI:n ChatGPT on tällainen.</p>
+            <h2 class="text-xl">Miten ne toimivat?</h2>
+            <p class="text-md">Suurien kielimallien toiminta perustuu perinpohjaiseen “koulutukseen”. Niille syötetään monipuolisesti tietoa siihen asti, että ne kykenevät ymmärtämään ja tunnistamaan sitä.</p>
+            <h2 class="text-xl">Miksi meidän tulisi välittää niistä?</h2>
+            <p class="text-md">Suuret kielimallit ovat suhteellisen uusi konsepti, mutta ne kehittyvät jatkuvasti. Tulevaisuudessa ne tulevat korvaamaan useita työpaikkoja, auttamaan meitä eri tieten osa-alueissa ja vaikuttamaan elämäämme päivittäin.</p>
+        </div>
+    </div>
+</body>
+</html>    

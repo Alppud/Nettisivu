@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Koodaaminen suurten kielimallien avulla</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .textbox {
+    background-color: #f4f4f6;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Koodaaminen suurten kielimallien avulla</h1>
+
+  <div class="textbox">
+    <h2>Tekoäly koodin tuottajana</h2>
+    <p>Tekoäly, etenkin suuret kielimallit, kykenevät tuottamaan koodia. Monet nykymaailman koodarit käyttävät tekoälyä päivittäisessä työssään omien taitojensa ohella. Tekoäly nopeuttaa ja helpottaa koodaamista, vaikkei kokonaan korvaakkaan ihmistä ainakaan lähivuosikymmenien aikana.</p>
+  </div>
+
+  <div class="textbox">
+    <h2>Tämän nettisivun koodaaminen tekoälyn avulla</h2>
+    <p>Tämä kyseinen nettisivu on koodattu tekoälyn avulla. Sen tekeminen oli hauskaa, mutta myös haastavaa. Tekoälyä ei voi pyytää luomaan kokonaista nettisivua puolestasi, se auttaa tekemään yksittäisiä muutoksia. Esimerkiksi nettisivun pohja on luotu tekoälyllä, mutta “design” osat minun täytyi tehdä itse. Tekoäly siis toimii käytännössä assistenttina, joka auttaa omien taitojen ohella.</p>
+    <p>Nettisivu on "julkaistu" Githubin avulla, sillä se on helppo ja ilmainen vaihtoehto.</p>
+  </div>
+
+  <div class="textbox">
+    <h2>Onko tekoälyn avulla koodaaminen vaikeaa?</h2>
+    <p>Se riippuu kokonaan siitä mitä tekee. Yksinkertaisen koodin tuottaminen tekoälyn avulla on hyvin helppoa tekoälyn avulla, mutta edistyneempään koodaamiseen tarvitaan myös paljon omia koodaamistaitoja. Tekoälystä on silti aina hyötyä.</p>
+ 
+</div>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Koodaaminen suurten kielimallien avulla</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom:
+    30px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .textbox {
+    background-color: #f4f4f6;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .game-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 2px solid #000;
+    margin: 0 auto;
+  }
+
+  .snake {
+    position: absolute;
+    background-color: green;
+    width: 20px;
+    height: 20px;
+  }
+
+  .food {
+    position: absolute;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+  }
+
+  #score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Esimerkki: Yksinkertainen matopeli</h1>
+
+  <div class="textbox">
+    <p>prompt: "Luo selainpohjainen yksinkertainen matopeli hyödyntäen HTML/CSS/Javascript koodikieliä. Pelin idea on simppeli: Pelaaja on mato, joka kerää omenoita 'laatikon' sisällä. Osuttaessa laatikon seiniin, peli alkaa alusta. Haluan, että näkyvissä on myös pistemittari."</p>
+  </div>
+
+  <div class="game-container">
+    <div id="snake" class="snake"></div>
+    <div id="score">Score: 0</div>
+  </div>
+</div>
+
+<script>
+  const snake = document.getElementById('snake');
+  const gameContainer = document.querySelector('.game-container');
+  let posX = 0;
+  let posY = 0;
+  let tail = [];
+  let tailLength = 1;
+  const tileSize = 20;
+  let direction = 'right';
+  let interval = 100;
+  let gameLoop;
+  let food;
+  let score = 0;
+  const scoreDisplay = document.getElementById('score');
+  let gameStarted = false; // Indicator if game has started
+
+  document.addEventListener('keydown', function(e) {
+    if (!gameStarted && ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
+      startGame();
+    }
+    changeDirection(e);
+  });
+
+  function startGame() {
+    gameLoop = setInterval(moveSnake, interval);
+    createFood();
+    gameStarted = true; // Mark game as started
+  }
+
+  function moveSnake() {
+    switch(direction) {
+      case 'up':
+        posY -= tileSize;
+        break;
+      case 'down':
+        posY += tileSize;
+        break;
+      case 'left':
+        posX -= tileSize;
+        break;
+      case 'right':
+        posX += tileSize;
+        break;
+    }
+    checkCollision();
+    updateSnakePosition();
+  }
+
+  function updateSnakePosition() {
+    if (posX >= 400 || posX < 0 || posY >= 400 || posY < 0) {
+      gameOver();
+      return;
+    }
+    snake.style.left = posX + 'px';
+    snake.style.top = posY + 'px';
+  }
+
+  function createFood() {
+    if (food) {
+      gameContainer.removeChild(food);
+    }
+    food = document.createElement('div');
+    food.classList.add('food');
+    const foodX = Math.floor(Math.random() * 20) * tileSize;
+    const foodY = Math.floor(Math.random() * 20) * tileSize;
+    food.style.left = foodX + 'px';
+    food.style.top = foodY + 'px';
+    gameContainer.appendChild(food);
+  }
+
+  function checkCollision() {
+    if (posX === parseInt(food.style.left) && posY === parseInt(food.style.top)) {
+      score++;
+      tailLength++;
+      scoreDisplay.innerText = 'Score: ' + score;
+      createFood();
+    }
+    updateTail();
+  }
+
+  function updateTail() {
+    tail.unshift({x: posX, y: posY});
+    if (tail.length > tailLength) {
+      tail.pop();
+    }
+  }
+
+  function gameOver() {
+    clearInterval(gameLoop);
+    alert('Peli päättyi! Pisteesi: ' + score);
+    resetGame();
+  }
+
+  function resetGame() {
+    score = 0;
+    scoreDisplay.innerText = 'Score: 0';
+    posX = 0;
+    posY
+    = 0;
+    tail = [];
+    tailLength = 1;
+    direction = 'right';
+    gameStarted = false; // Reset the game start indicator
+    startGame(); // Restart game
+  }
+
+  function changeDirection(e) {
+    switch(e.key) {
+      case 'ArrowUp':
+        if (direction !== 'down') {
+          direction = 'up';
+        }
+        break;
+      case 'ArrowDown':
+        if (direction !== 'up') {
+          direction = 'down';
+        }
+        break;
+      case 'ArrowLeft':
+        if (direction !== 'right') {
+          direction = 'left';
+        }
+        break;
+      case 'ArrowRight':
+        if (direction !== 'left') {
+          direction = 'right';
+        }
+        break;
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
